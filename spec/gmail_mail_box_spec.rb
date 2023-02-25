@@ -21,7 +21,8 @@ RSpec.describe 'mail box' do
     message_list = gmail.list_user_messages('me')
     message_ids = message_list.messages.map(&:id)
     message_id = message_ids.sample
-    mark_as_read = gmail.modify_message('me', message_id, { remove_label_ids: ['UNREAD'] })
+    remove_label_hash = { remove_label_ids: ['UNREAD'] }
+    mark_as_read = gmail.modify_message('me', message_id, remove_label_hash )
     expect(mark_as_read.label_ids).not_to include('UNREAD')
   end
 

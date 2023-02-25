@@ -8,7 +8,7 @@ pipeline {
         }
         stage("Clone Repo"){
             steps {
-                sh "git clone https://github.com/gogstar1899/gmail.git"
+                sh "git clone https://github.com/gogstar1899/rspec_gmail_api.git"
             }
         }
         stage("Build"){

@@ -6,6 +6,11 @@ pipeline {
                 deleteDir()
             }
         }
+        stage("Clone Repo"){
+            steps {
+                sh "git clone https://github.com/gogstar1899/gmail.git"
+            }
+        }
         stage("Build"){
           steps {
               dir("rspec_gmail_api") {

@@ -1,23 +1,21 @@
-pipeline {
-    agent any
-    stages {
-        stage("Clean up"){
-            steps {
-                deleteDir()
-            }
-        }
-        stage("Clone Repo"){
-            steps {
-                sh "git clone https://github.com/gogstar1899/rspec_gmail_api.git"
-            }
-        }
-        stage("Build"){
-          steps {
-              dir("rspec_gmail_api") {
-               sh "bundle install"
-               sh "bundle exec rspec ."
-              }
-          }
-        }
-    }
-}
+# frozen_string_literal: true
+
+pipeline do
+  agent any
+  stages do
+    stage('Clean up') do
+      steps do
+        deleteDir
+      end
+    end
+    stage('Build') do
+      steps do
+        dir('rspec_gmail_api') do
+          sh 'gem install bundler'
+          sh 'bundle install'
+          sh 'bundle exec rspec .'
+        end
+      end
+    end
+  end
+end

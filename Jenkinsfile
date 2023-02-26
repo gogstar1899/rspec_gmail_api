@@ -20,8 +20,10 @@ pipeline {
               }
           }
         }
-        stage("Report"){
-          junit 'rspec.xml'
-        }
+        post {
+          always {
+            junit 'rspec/*.xml'
+      }
+   } 
     }
 }

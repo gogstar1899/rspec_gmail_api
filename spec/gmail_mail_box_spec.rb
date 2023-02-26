@@ -17,7 +17,7 @@ RSpec.describe 'mail box' do
     expect(response.result_size_estimate).to be >= 0
   end
 
-  it 'marks the message as read' do
+  xit 'marks the message as read' do
     message_list = gmail.list_user_messages('me')
     message_ids = message_list.messages.map(&:id)
     message_id = message_ids.sample

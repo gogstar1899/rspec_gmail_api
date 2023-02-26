@@ -1,5 +1,4 @@
 --require spec_helper
---format html
---out report.html
+--format documentation --format html --out reports/report.html
 --format RspecJunitFormatter 
 --out rspec.xml

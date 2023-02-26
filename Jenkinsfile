@@ -14,9 +14,9 @@ pipeline {
         stage("Build"){
           steps {
               dir("rspec_gmail_api") {
-               sh "gem install bundler" 
-               sh "bundle install"
-               sh "bundle exec rspec ."
+                sh "gem install bundler"
+                sh "bundle install"
+                sh "bundle exec rspec ."
               }
           }
         }

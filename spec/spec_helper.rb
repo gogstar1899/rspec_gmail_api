@@ -96,7 +96,7 @@ RSpec.configure do |config|
   #   # as the one that triggered the failure.
   #   Kernel.srand config.seed
 
-  RSpec.configure do |configuration|
-    configuration.default_formatter = :documentation
-  end
+  # RSpec.configure do |configuration|
+  #   configuration.default_formatter = :documentation
+  # end
 end

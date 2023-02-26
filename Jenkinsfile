@@ -20,10 +20,9 @@ pipeline {
               }
           }
         }
-        post {
-          always {
-            junit 'rspec/*.xml'
-      }
-   } 
+        stage("Reports"){
+          steps([$class: 'JUnitResultArchiver', testResults: 'rspec/*.xml', healthScaleFactor: 1.0])
+          junit 'rspec/*.xml'
+        }
     }
 }

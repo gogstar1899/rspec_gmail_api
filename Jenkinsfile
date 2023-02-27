@@ -23,7 +23,7 @@ pipeline {
               alwaysLinkToLastBuild: false,
               keepAll: true,
               reportDir: 'reports',
-              reportFiles: 'report.html',
+              reportFiles: 'overview.html', 'send-mail.html', 'mail-box.html', 'gmail-labels.html',
               reportName: "Reporting Result"
             ])
           }

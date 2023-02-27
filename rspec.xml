@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="rspec" tests="7" skipped="1" failures="0" errors="0" time="6.057526" timestamp="2023-02-27T10:55:10+02:00" hostname="GDEMIREV-M-4373">
+<properties>
+<property name="seed" value="8386"/>
+</properties>
+<testcase classname="spec.gmail_label_spec" name="gmail labels creates a new label" file="./spec/gmail_label_spec.rb" time="1.510389"></testcase>
+<testcase classname="spec.gmail_label_spec" name="gmail labels deletes the new label" file="./spec/gmail_label_spec.rb" time="0.910627"></testcase>
+<testcase classname="spec.gmail_mail_box_spec" name="mail box returns the last 10 messages" file="./spec/gmail_mail_box_spec.rb" time="0.212999"></testcase>
+<testcase classname="spec.gmail_mail_box_spec" name="mail box returns the number of unread messages" file="./spec/gmail_mail_box_spec.rb" time="0.228627"></testcase>
+<testcase classname="spec.gmail_mail_box_spec" name="mail box marks the message as read" file="./spec/gmail_mail_box_spec.rb" time="0.000068"><skipped/></testcase>
+<testcase classname="spec.gmail_mail_box_spec" name="mail box returns the message name" file="./spec/gmail_mail_box_spec.rb" time="2.369055"></testcase>
+<testcase classname="spec.gmail_send_mail_spec" name="send mail verify that message was sent" file="./spec/gmail_send_mail_spec.rb" time="0.744470"></testcase>
+</testsuite>
